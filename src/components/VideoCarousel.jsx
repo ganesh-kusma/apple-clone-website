@@ -84,7 +84,6 @@ const VideoCarousel = () => {
             if (videoId === 0) {
                 anim.restart()
             }
-            console.log(videoRef.current[videoId].currentTime)
             const animUpdate = () => {
                 anim.progress(videoRef.current[videoId].currentTime / hightlightsSlides[videoId].videoDuration)
             }
@@ -169,7 +168,6 @@ const VideoCarousel = () => {
                     ))}
                 </div>
                 <button className='control-btn'>
-                    {console.log(isLastVideo)}
                     <img src={isLastVideo ? replayImg : !isPlaying ? playImg : pauseImg}
                         alt={isLastVideo ? 'replay' : !isPlaying ? 'play' : 'pause'}
                         onClick={
